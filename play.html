@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
+  <script language="javascript" type="text/javascript" src="libraries/p5js/p5.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/p5js/p5.sound.min.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/blockly/blockly_compressed.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/blockly/blocks_compressed.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/blockly/fr.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/blockly/python_compressed.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/blockly/saveJulieBlocks.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/blockly/javascript_compressed.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/blockly/java.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/blockly/pseudo_generator.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/blockly/saveJulieGenerators.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/blockly/java_generator.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/blockly/workspaceOptions.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/blockly/blockly_interface.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/ace/ace.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/jquery/jquery-3.7.0.min.js"></script>
+  <script language="javascript" type="text/javascript" src="saveJulie.js" id="mainCode"></script>
+  <script language="javascript" type="text/javascript" src="tutorial.js" id="tutorialCode"></script>
+  <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="shortcut icon" type="image/ico" href="images/julie.ico"/>
+
+</head>
+
+<body id="playgroundBody"" onload="initializePlay();initializeTuto();" onmouseover="playBackgroundSound();"">
+
+  <div id="loadingScreen">
+
+    <img id="cog" src="images/mechanics.gif">
+	  
+    <div id="progressbar"></div>   
+	  
+  </div>
+
+  <div id="pageContainer">
+
+    <div id="gameArea">
+
+      <section id="titleArea" onclick="loop();">
+
+        <div id="zoomDiv">
+
+          <img id="zoomInIcon" src="images/zoomin32x32.png" onclick="zoomIn();" title="Zoomer"/>
+          <img id="zoomOutIcon" src="images/zoomout32x32.png" onclick="zoomOut();" title="Dézoomer"/>
+		  <img id="autoScript" src="images/script_off.png" onclick="toggleAutoScript();" title="Autoscript"/>
+		  <img id="volumeIcon" src="images/volume_on.png" onclick="toggleVolume();" title="Volume"/>
+		  <img id="tutoIcon" src="images/notes128x128.png" onclick="toggleActiveTuto();" title="Tutoriel"/>
+
+        </div>
+
+        <div class='title' type='text' id="universeTitle">Univers 1</div>
+        -
+        <div class='title' type='text' id="worldTitle">Monde 1</div>
+
+      </section>
+
+      <section id="playgroundArea">
+
+         <div id="canvas-holder"></div>
+
+      </section>
+
+      <section id="itemBrowser">
+
+        <div id="worldNb" class="worldNb"></div>
+
+      </section>
+
+      <section id="editorArea">
+
+		 <div id="blocklyArea">
+
+	         <div id="blockly-editor">
+	         </div>
+
+		 <div>	 
+
+         <div id="code-holder">
+			 
+           <div id="editorHeader">
+			   
+             <select id="languageSelect" onchange="changeLanguage(event.currentTarget.value);">
+                 <option selected value="javascript">Javascript</option>
+                 <option value="python">Python</option>
+                 <option value="java">Java</option>
+                 <option value="pseudo">Pseudocode</option>
+			 </select>
+
+			  <span id="editorTabs">
+			    <button id="javascriptTab" class="languageTab" onclick="changeLanguage('javascript')">Javascript</button>
+			    <button id="pythonTab" class="languageTab" onclick="changeLanguage('python')">Python</button>
+			    <button id="javaTab" class="languageTab" onclick="changeLanguage('java')">Java</button>
+			    <button id="pseudoTab" class="languageTab" onclick="changeLanguage('pseudo')">Pseudocode</button>
+			 </span>
+			   
+           </div>
+           <div id="codeEditor"></div>
+           </br>
+           <img id="runImg" src="images/run64x64.png" onclick="run();" title="Exécuter" />
+           <img id="codeImg" src="images/pencil64x64.png" onclick="generateCode();" title="Coder" />
+           <img id="loadImg" src="images/open64x64.png" onclick="if(codeChangesSaved)document.getElementById('fileUpload').click(); else openFileApproval()" title="Ouvrir" />
+           <img id="saveImg" src="images/save64x64.png" onclick="saveWorkspace();" title="Enregistrer" />
+           <img id="topoButton" src="images/map2_64x64.png" onclick="window.location.href = 'topos.html';" title="Topos !"/>
+           <img id="homeImg" src="images/hut2_64x64.png" onclick="window.location.href = 'index.html';" title="Retour à la cabane !" />
+           <img id="tutoImg" src="images/blackboard64x64.png" onclick="toggleTuto('tutoButtonClicked');" title="Montrez-moi !" /><br/>
+           <input type="file" id="fileUpload" onclick="return;"" onchange="uploadDataFile(event);">
+
+         </div>
+
+      </section>
+
+    </div>
+
+    <div id="tutorialArea">
+
+      <div id="tutorialControls">
+
+        <img id="closeButton" onclick="toggleTuto('tutoButtonClicked')" src="images/close_button32x32.png">
+
+      </div>
+
+      <div id="tutorialContent">
+
+         <h1 id="tutoTitle"></h1>
+         <h2 id="tutoSlideName"></h2>
+         <div id="tutoExplain"></div>
+		  
+      </div>
+
+		  <div id="tutorialNavigate"></div>
+
+    </div>
+
+
+
+  </div>
+
+  <xml id="toolbox" style="display: none">
+
+    <category colour="184" name="Actions">
+
+	  	<block type="move"></block>
+  		<block type="turn"></block>
+  		<block type="jump"></block>
+
+  	</category>
+
+    <category colour="322" name="Répétitions">
+
+	   <block type="repeat_n_times"></block>
+	   <block type="repeat_until_something"></block>
+
+	</category>
+
+    <category colour="207" name="Tests">
+
+       <block type="if_something_in_direction"></block>
+       <block type="if_else_something_in_direction"></block>
+	   <block type="if_crack_width"></block>
+	   <block type="if_else_crack_width"></block>
+       <block type="if_crack"></block>
+	   <block type="if_else_crack"></block>
+
+	</category>
+
+    <category colour="230" name="Définitions">
+
+       <block type="definition:move_to_something"></block>
+       <block type="definition:tack"></block>
+       <block type="definition:tack_to_something"></block>
+       <block type="definition:tack_params"></block>
+
+    </category>
+
+    <category colour="230" name="Fonctions">
+
+      <block type="move_to_something"></block>
+      <block type="tack"></block>
+	  <block type="tack_to_something"></block>
+	  <block type="tack_params"></block>
+
+	</category>
+
+  <!--
+
+  <category name="Variables" colour="100" custom="VARIABLE"></category>
+  <category name="Functions" colour="290" custom="PROCEDURE"></category>
+
+  -->
+
+  </xml>
+
+  </body>
+
+</html>

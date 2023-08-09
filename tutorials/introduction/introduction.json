@@ -1,0 +1,215 @@
+{
+  "info": {
+    "name": "introduction",
+    "author": "Collège St-Michel",
+    "currentStageNb": 0,
+    "currentSlideNb": 0
+  },
+
+  "content": {
+
+    "stage" :
+
+      [
+
+        {
+
+          "number" : 0,
+          "title": "Sauvez Julie",
+          "visible": true,
+          "viewed": false,
+          "slide" : [
+
+            { "name": "Introduction",
+              "text": "Julie s'est imprudemment aventurée seule sur un glacier recouvert de neige. Prenant conscience du danger que représentent les crevasses, elle s'arrête et appel à l'aide. Marc, un guide de haute-montagne passant en bordure du glacier entend les appels au secours et décide d'aider Julie.",
+              "image": {"src": "julie128x128.png",
+                         "size": "128px"
+              }
+          
+            },
+
+
+            { "name": "Mission",
+              "text": "Aide Marc à rejoindre Julie en lui indiquant un itinéraire sûr, sans tomber dans une crevasse ou recevoir un rocher tombant des parois avoisinantes du glacier.",
+              "image": {"src": "topo - intro.png",
+                        "size": "30vh"
+              }
+            
+            },
+
+              { "name": "Ressources",
+              "text": "Marc peut entreprendre différentes <b>actions simples</b> telles que 'avancer', 'tourner' ou 'sauter'. Les actions que l'on peut demander à Marc d'effectuer prennent la forme de blocs visuels.",
+
+              "image": {"src": "ressources_basic_actions.png",
+                "size": "400px"
+                }
+            
+              },
+
+              { "name": "Contraintes",
+              "text": "Marc se déplace sur la glacier en avançant d'une case ou en sautant de deux cases. Le glacier est composé de zones sûres (cases bleues), de zones risquées car recouverte de neige et pouvant dissimuler une crevasse (cases blanches) ainsi que de crevasses ouvertes. N'étant pas encordé, Marc ne doit s'aventurer que sur des cases bleues, sous peine de tomber dans une crevasse. Il ne doit également pas sortir du glacier, sans quoi il se trouverait sous une falaise le bordant et pourrait être victime d'une chute de pierres.",
+
+              "image": {"src": "cell types.png",
+                "size": "43vh"
+                }
+            
+              },
+
+
+              { "name": "Itinéraire",
+              "text": "La combinaisons de ces blocs permet de construire un itinéraire que Marc suivra afin de rejoindre Julie.",
+
+              "image": {"src": "route1.png",
+                        "size": "300px"}
+            
+              },
+
+
+              {"name": "Construction de l'itinéraire.",
+              "text": "Afin de construire un itinéraire il suffit de cliquer sur un groupe d'opérations (actions, répétitions, tests), de glisser un premier bloc dans l'éditeur visuel, puis de répéter l'opération en assemblant les blocs suivants aux précédents. Pour assembler un bloc à un autre, il suffit de les rapprocher et de les cliper l'un à l'autre.",
+              "video": "topo - assembly.webm",
+
+              "image": {"src": "blocks.png",
+                        "size": "200px"}
+
+              },
+
+
+              {"name": "Affichage et édition des blocs",
+              "text": "Les boutons en bas de l'éditeur permettent de diminuer ou augmenter la taille des blocs, tout comme de les recentrer dans la zone d'édition. Un bloc sélectionné peut être déclipé, déplacé et reclipé. On peut également le supprimer ou le dupliquer avec un simple 'copier / coller.",
+
+              "video": "topo - edition.webm",
+
+              "image": {"src": "zoom_buttons.png",
+                        "size": "30%"}
+
+              },
+            
+              {"name": "Premier itinéraire",
+              "text": "A vous de jouer en composant pour Marc un itinéraire sûr le menant à Julie ! Vous pouvez à tout moment revenir au tutoriel en cliquant sur le tableau noir en-dessus de l'éditeur de code. Une fois l'itinéraire composé, rendez-vous au second topo en cliquant sur le cercle bleu contenant le numéro 2.",
+
+              "image": {"src": "topo - 1st try.png",
+                        "size": "45vh"}
+            
+              }
+
+
+          ]
+
+        },
+
+        {
+
+          "number" : 1,
+          "title": "Sauvez Julie",
+          "visible": true,
+          "viewed": false,
+          "slide" : [
+
+            { "name": "Codage",
+              "text": "Pour être transmis à Marc, les blocs visuels de l'algorithme décrivant l'itinéraire à suivre doivent être codés sous forme de texte dans un langage de programmation. Nous pouvons demander à notre ordinateur de réaliser ce codage en cliquant sur le bouton avec le <b>crayon</b> en dessous de l'éditeur de code. Après avoir cliqué sur ce dernier, le code apparaît dans l'éditeur.",
+              
+              "image": {"src": "blocks_to_code_editor.png",
+                        "size": "100%"}
+
+              },
+
+            { "name": "Exécution",
+              "text": "Afin de transmettre à Marc le code de l'algorithme pour que celui-ci se mette à le suivre, il suffit de cliquer sur le bouton <b>Démarrer</b>. Si le suivi de l'algorithme permet à Marc de rejoindre Julie, la mission de sauvetage est un succès et une nouvelle configuration topographique (topo) est soumise à Marc. Dans le cas contraire, Marc revient au point de départ du topo actuel.<br><br>A vous de jouer : codez l'algorithme de ce topo et exécutez-le !",
+              "image": {"src": "run128x128.png",
+                        "size": "128px"}
+
+            }
+
+          ]
+
+        },
+
+        {
+
+          "number" : 2,
+          "title": "Sauvez Julie",
+          "visible": true,
+          "viewed": false,
+          "slide" : [
+
+            { "name": "Enregistrement des topos",
+              "text": "Afin de ne pas perdre les algorithmes d'une série de topos (exercice), il est possible d'enregistrer ces derniers dans un fichier. A cet effet, il suffit de cliquer en-dessous de l'éditeur sur le bouton représentant une disquette puis d'indiquer au navigateur web sous quel nom, sur quel lecteur et dans quel dossier enregister les topos.<br><br> La fin du nom du fichier doit se terminer par l'extension .json (à ne pas effacer !). Si a priori rien ne se passe après avoir cliqué sur la disquette, passez à l'écran suivant de ce tuto.",
+              
+              "image": {"src": "save128x127.png",
+                        "size": "128px"}
+
+              },
+
+            { "name": "Navigateur et téléchargement",
+              "text": "Par défaut, la plupart des navigateurs web ne demandent pas à leur utilisateur où enregistrer les fichiers téléchargés. Ceux-ci sont alors placés dans le dossier 'Téléchargements' de l'utilisateur. Afin de requérir du navigateur web qu'il vous demande où enregistrer le fichier contenant vos topos, il est nécessaire de modifier les paramètres de votre navigateur web.<br><br>Vous trouverez sur la dia suivante comment procéder dans le cas du navigateur Chrome (la procédure est fort similaire pour les autres navigateurs).",
+              "image": {"src": "download_folder.png",
+                        "size": "30%"}
+
+            },
+
+            { "name": "Configuration du navigateur (1)",
+              "text": "Afin de configure le navigateur web Chrome pour exiger qu'il vous demande où enregistrer un fichier téléchargé, il suffit d'effectuer les opérations suivantes :<br><br><ol><li>cliquer sur les boutons avec les <strong>...</strong> verticaux en haut à droite de la barre d'adresse du navigateur</li><li>sélectionner <strong>Paramètres</strong></li><li>dans le volet gauche, cliquer sur <strong>Téléchargements</strong></li><li>activer l'option 'Toujours demander où enregistrer les fichiers'</li></ol>",
+              "image": {"src": "download_file_location.png",
+                        "size": "80%"}
+
+            },
+
+
+            {"name": "Configuration du navigateur (2)",
+             "text": "La vidéo ci-dessous vous montre comment configurer Chrome à cet effet : ",
+             "video": "download_browser_setting.mp4"},
+
+            {"name": "Mise en pratique",
+             "text": "Enregistrez cet exercice dans un fichier. Choisissez le nom du fichier, le lecteur et le dossier dans lequel le sauvegarder.",
+             "video": "download_file.mp4"}
+
+          ]
+
+        },
+
+        {
+
+          "number" : 3,
+          "title": "Sauvez Julie",
+          "visible": true,
+          "viewed": false,
+          "slide" : [
+
+            { "name": "Liste des exercices",
+              "text": "Le bouton avec la carte et la boussole, en dessous de l'éditeur de code, permet de revenir à la liste des exercices.",
+                            
+              "image": {"src": "topos_list.png",
+                        "size": "70%"}
+
+
+              },
+
+            { "name": "Avertissement de sauvegarde",
+              "text": "Lorsque l'on entreprend une action amenant à quitter l'espace de jeu (éditeurs de code et topos) pour ouvrir une autre série de topos ou accéder à une autre page, l'application affiche un message d'avertissement dans le cas où les dernières modifications des codes (blocs, codes sources) n'ont pas été enregistrées dans un fichier. Afin de ne pas perdre ces modifications, il est nécessaire d'<b>annuler</b> l'opération et de procéder à l'enregistrement des modifications. Le message d'avertissement peut varier d'un navigateur web à un autre.",
+              "image": {"src": "save_warning.png",
+                        "size": ""}
+
+            },
+
+            { "name": "Ouverture des topos",
+              "text": "Afin d'ouvrir une série de topos (exercice) enregistrée dans un fichier, il suffit de cliquer sur le bouton avec dossier ouvert, puis de sélectionner le fichier à ouvrir à partir du lecteur et du dossier dans lequel celui-ci a été enregistré.",
+              "image": {"src": "open128x128.png",
+                        "size": "128px"}
+
+            },
+
+
+            {"name": "A vous de jouer !",
+             "text": "Accédez à la liste des exercices puis ouvrez cet exercice, que vous avez précédemment enregistré à la deuxième étape de ce topo. Accédez aux premiers topos de l'exercice : les blocs que vous aviez assemblés et les codes générés ont bien été sauvegardés-",
+             "video": "open_list_file_topos.mp4"}
+                  
+          ]
+
+        }        
+
+    ]
+
+  }
+
+}

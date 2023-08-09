@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
+  <script language="javascript" type="text/javascript" src="libraries/p5js/p5.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/p5js/p5.sound.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/blockly/blockly_interface.js"></script>
+  <script language="javascript" type="text/javascript" src="editor.js"></script>
+  <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="editor.css">
+  <link rel="shortcut icon" type="image/ico" href="images/julie.ico"/>
+
+</head>
+
+<body>
+
+  <section id="titleArea">
+
+    <img id="editorIcon" src="images/editor128x128.png"/>
+
+    <div id="titlesInput">
+
+      <input class='title' type='text' id="universeTitleInput"/>
+      -
+      <input class='title' type='text' id="worldTitleInput"/>
+
+    </div>
+
+  </section>
+
+  <section id="settingsArea">
+
+    <div id="settingsDiv">
+
+      <label class="settingsLabel" for="columnsNb">columnsNb :  </>
+      <input type='number' id="columnsNb" min="1" max="50" value="11"/>
+      <label class="settingsLabel" for="rowsNb">rowsNb :  </>
+      <input type='number' id="rowsNb" min="1" max="50" value="6"/>
+      <label id="iconLabel" for="iconImg">Elément : </label>
+      <img id="iconImg" src="images/crack128x128.png">
+      <label class="settingsLabel" for="head">border : </label>
+      <input type="color" id="colorPicker" value="#e3e3e3" onchange="setBorderColor();">
+
+    </div>
+
+  </section>
+
+  <section id="playgroundArea">
+
+     <div id="canvas-holder"></div>
+
+  </section>
+
+  <section id="itemBrowser">
+
+    <div id="worldNb" class="worldNb"></div>
+
+  </section>
+
+  <section id="commandArea">
+
+    <div id="commandDiv">
+
+       <img id="clearImg" src="images/refresh64x64.png" class="cmdIcons" title="Clear world"/>
+       <img id="addImg" src="images/add64x64.png" class="cmdIcons" title="Add new world"/>
+       <img id="removeImg" src="images/remove64x64.png" class="cmdIcons" title="Delete world"/>
+       <img id="moveLeftImg" src="images/left-arrow64x64.png" class="cmdIcons" title="Move world left"/>
+       <img id="moveRightImg" src="images/right-arrow64x64.png" class="cmdIcons" title="Move world right"/>
+       <img id="restartImg" src="images/restart64x64.png" class="cmdIcons" title="Clear universe"/>
+       <img id="loadImg" src="images/open64x64.png" class="cmdIcons" title="Load universe"/>
+       <img id="saveImg" src="images/save64x64.png" class="cmdIcons" title="Save universe"/>
+       <img id="hutImg" src="images/hut2_64x64.png" onclick="window.location.href = 'index.html';" title="Retour à la cabane !" /><br/>
+       <br/>
+       <input type="file" id="fileUpload">
+
+     </div>
+
+  </section>
+
+  </body>
+
+</html>

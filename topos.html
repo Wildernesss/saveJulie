@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <link href='https://fonts.googleapis.com/css?family=McLaren' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="shortcut icon" type="image/ico" href="images/julie.ico"/>
+  
+  <script language="javascript" type="text/javascript" src="saveJulie.js" id="mainCode"></script>
+
+   <script>
+
+          var activeTutorial = localStorage.getItem('activeTutorial');
+          var autoScript = localStorage.getItem('autoScript');
+          var volumeOn = localStorage.getItem('volumeOn');
+
+
+          localStorage.clear();
+
+          localStorage.setItem('activeTutorial', activeTutorial);
+          localStorage.setItem('autoScript', autoScript);
+          localStorage.setItem('volumeOn', volumeOn);
+
+   </script>
+
+</head>
+
+<body>
+
+  <section id="titleArea">
+
+     <div id="mainTitleDiv">
+
+       <h1 id="mainTitle" class="title">
+
+         <img id="julieSmallImg" src="images/julie64x64.png"/>
+         Sauvez Julie !
+
+       </h1>
+
+     <div>
+
+     <div id="toposDiv">
+
+        <p id="toposExplanation">Sélectionnez une série de topos et lancez-vous
+        dans l'aventure ! Vous pouvez également créer vos propres topos
+        en utilisant l'éditeur de cartes.</p>
+
+        <img id="topoIcon" src="images/map2_128x128.png" title="C'est parti !"/>
+
+     </div>
+
+  </section>
+
+  <section id="toposSection">
+
+    <div id="toposCountainer">
+
+      <table id="toposTable">
+
+        <tr>
+          <td class="iconRow">
+            <a href='play.html?filename=tutorial - intro.json'>
+            <img id="playSmallIcon" src="images/play48x48.png" title="C'est parti !"/>
+            </a>
+          </td>
+          <td class="descriptionRow">
+              Introduction (tutoriel)
+          </td>
+        </tr>
+
+        <tr>
+           <td class="iconRow">
+             <a href='play.html?filename=script - demos1.json'>
+               <img id="playSmallIcon" src="images/play48x48.png" title="C'est parti !"/>
+               </a>
+           </td>
+           <td class="descriptionRow">
+             Topos - illustrations (script)
+           </td>
+        </tr>
+
+        <tr>
+         <td class="iconRow">
+           <a href='play.html?filename=exercice 1 - sequences.json'>
+             <img id="playSmallIcon" src="images/play48x48.png" title="C'est parti !"/>
+             </a>
+          </td>
+         <td class="descriptionRow">
+           Exercice 1 - séquences d'instructions
+         </td>
+        </tr>
+
+        <tr>
+         <td class="iconRow">
+           <a href='play.html?filename=exercice 2 - repetitions.json'>
+             <img id="playSmallIcon" src="images/play48x48.png" title="C'est parti !"/>
+             </a>
+          </td>
+         <td class="descriptionRow">
+           Exercice 2 - répétitions à compteur
+         </td>
+        </tr>
+
+        <tr>
+         <td class="iconRow">
+           <a href='play.html?filename=exercice 3 - repetitions conditionnelles.json'>
+             <img id="playSmallIcon" src="images/play48x48.png" title="C'est parti !"/>
+             </a>
+          </td>
+         <td class="descriptionRow">
+           Exercice 3 - répétitions conditionnelles
+         </td>
+        </tr>
+
+        <tr>
+         <td class="iconRow">
+           <a href='play.html?filename=exercice 4 - tests.json'>
+             <img id="playSmallIcon" src="images/play48x48.png" title="C'est parti !"/>
+             </a>
+          </td>
+         <td class="descriptionRow">
+           Exercice 4 - tests conditionnels
+         </td>
+        </tr>
+
+        <tr>
+
+          <td class="iconRow">
+            <a href='play.html?filename=exercice A - Angry birds.json'>
+               <img id="playSmallIcon" src="images/play48x48.png" title="C'est parti !"/>
+            </a>
+          </td>
+
+          <td class="descriptionRow">
+           Exercice A - Source : Hour of Code - Angry Birds
+          </td>
+
+        </tr>
+
+        <tr>
+
+         <td class="iconRow">
+           <a href='play.html?filename=exercice B - labyrinthe.json'>
+             <img id="playSmallIcon" src="images/play48x48.png" title="C'est parti !"/>
+             </a>
+         </td>
+
+         <td class="descriptionRow">
+           Exercice B - Source : labyrinthes (Blockly)
+         </td>
+
+        </tr>
+
+      </table>
+
+    </div>
+
+    <img id="loadImg" src="images/open64x64.png" onclick="document.getElementById('fileUpload').click();" title="Ouvrir" />
+
+    <a href='editor.html'>
+      <img id="editorSmallIcon" src="images/editor64x64.png" title="Créer vos propres topos !"/>
+    </a>
+
+    <img id="hutImg" src="images/hut2_64x64.png" onclick="window.location.href = 'index.html';" title="Retour à la cabane !" /><br/>
+
+    <input type="file" id="fileUpload" onchange="uploadDataFile(event);">
+
+
+  </section>
+
+  </body>
+
+</html>

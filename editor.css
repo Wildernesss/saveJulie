@@ -1,0 +1,211 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url("images/plaine_morte.jpg");
+
+}
+
+#editor{
+
+  width: 200px;
+
+}
+
+#playgroundArea{
+
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+
+}
+
+#canvas-holder{
+
+
+}
+
+
+#editorArea{
+
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+
+}
+
+#blockly-holder{
+
+
+}
+
+#code-holder{
+
+
+}
+
+
+#codeEditor{
+
+  width: 450px;
+  height: 250px;
+  margin-left: 30px;
+
+}
+
+#runImg, #languageSelect{
+
+  margin-left: 30px;
+
+}
+
+#languageSelect{
+
+   font-size: 16px;
+
+}
+
+#fileUpload{
+
+   visibility: hidden;
+
+}
+
+#worldNb{
+
+    padding-top: 30px;
+    text-align: center;}
+
+.iconNb {
+
+  font-family: Arial, sans-serif;
+  background: #5178D0;
+  border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.6em;
+  margin-right: 5px;
+  text-align: center;
+  width: 1.6em;
+  height: 1.6em;
+}
+
+.settingsLabel{
+
+   display: inline-block;
+   font-family: Arial, sans-serif;
+   color: #ffffff;
+   margin-right : 10px;
+   margin-left: 10px;
+
+}
+
+#colorPicker{
+
+  height: 20px;
+
+}
+
+#settingsArea{
+
+   text-align: center;
+   margin-top: 20px;
+
+}
+
+#iconImg{
+
+   height: 25px;
+   background-color: white;
+   margin-left : 10px;
+   vertical-align: middle;
+
+}
+
+#iconLabel{
+
+   margin-left: 10px;
+
+}
+
+#commandDiv{
+
+  text-align: center;
+  margin-top: 40px;
+
+}
+
+.cmdIcons{
+
+   width:56px;
+
+}
+
+
+.title{
+
+  border: none;
+  margin: auto;
+  display: block;
+  margin-top: 15px;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  font-size:12pt;
+
+}
+
+.titlesInput{
+
+  margin-left: -50px;
+
+
+}
+
+
+#universeTitleInput{
+
+  margin-top: 30px;
+  color: #f5f05b;
+  font-size:16pt;
+
+}
+
+#worldTitleInput{
+
+  margin-top: 5px;
+  margin-bottom: 20px;
+
+}
+
+
+#universeTitleInput, #worldTitleInput{
+
+  background-color:transparent;
+
+}
+
+
+#settingsDiv{
+
+  margin-top: 30px;
+
+}
+
+#editorIcon{
+
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+}
+
+
+#rowsNb, #columnsNb{
+
+    width:30px;
+
+}

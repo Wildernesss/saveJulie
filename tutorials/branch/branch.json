@@ -1,0 +1,78 @@
+{
+  "info": {
+    "name": "branch",
+    "author": "Collège St-Michel",
+    "currentStageNb": 0,
+    "currentSlideNb": 0    
+  },
+
+  "content": {
+
+    "stage" :
+
+      [
+
+        {
+
+          "number" : 0,
+          "title": "Sauvez Julie",
+          "visible": true,
+          "viewed": false,
+          "slide" : [
+
+              { "name": "Branchements conditionnels",
+                "text": "Dans la vie, nous faisons des choix quant aux actions que nous entreprenons. Le choix effectué dépend d'une ou de plusieurs conditions dans lesquelles on se trouve. Par exemple, arrivé à un carrefour, nous devons faire un choix quant à la route à emprunter. La décision dépendra d'une condition, telle que par exemple le trafic sur chacune des deux routes possibles. <b>Si</b> le trafic est fluide sur la route de gauche, je m'engange sur cette dernière</b>, <b>sinon je prends la route de droite.",
+                "image": {"src": "choice.png",
+                          "size": "15em"}
+  
+              },
+  
+              { "name": "Répétitions conditionelles",
+                "text": "Il est également possible de demander à Marc de prendre une décision selon la situation dans laquelle il se trouve. Par exemple, s'il se trouve devant une crevasse, on peut lui demander de sauter ou de tourner, sinon d'avancer. Avec les blocs <b>si</b> et <b>si ... sinon</b> il est possible de demander à Marc de choisir entre une ou deux séquences d'opérations selon sa situation sur le glacier.<br><br>Concevez un petit algorithme demandant à Marc de faire un choix afin de rejoindre Julie, selon la situation à laquelle il est confronté dans le topo 1 !",
+                "image": {"src": "branch.png",
+                          "size": "12em"}
+  
+              }
+
+            ]
+          
+        },
+  
+        {
+
+            "number" : 1,
+            "title": "Sauvez Julie",
+            "visible": true,
+            "viewed": false,
+            "slide" : [
+  
+              { "name": "Imbrications",
+                "text": "Un algorithme est le plus souvent constitué non seulement de séquences, de répétitions et de choix d'opérations à effectuer, mais également de combinaisons de répétitons et de choix. On peut par exemple demander à Marc de répéter plusieurs fois une décision en plaçant un bloc 'si' dans un bloc 'répéter n fois' ou 'répéter jusqu'à'. Lorsqu'on place un bloc dans un autre bloc, on parle alors d'<b>imbrication</b> de ces blocs.",
+                "image": {"src": "imbrication.png",
+                          "size": "15em"}
+  
+              },
+  
+              { "name": "Niveau d'imbrication",
+                "text": "De la même manière que l'on peut placer une boîte dans une boîte se trouvant dans une autre boîte, il est possible de faire plusieurs imbrications de blocs à différents niveaux de profondeur.",
+                "image": {"src": "imbrication_level.png",
+                          "size": "15em"}
+  
+              },
+  
+              { "name": "Simplicité",
+                "text": "Il n'est pas rare que plusieurs algorithmes soient possibles pour atteindre un même objectif. Le meilleur algorithme est toujours le plus simple et le plus court. Moins Marc devra faire de déplacements pour rejoindre Julie, meilleur sera l'algorithme qu'il aura dû suivre à cet effet.<br><br>En utilisant <i>tous les blocs</i> à votre disposition, composez les algorithmes qui demanderons à Marc le moins d'efforts afin d'aller secourir Julie ! A vous de jouer !",
+                "image": {"src": "glacier_guide.jpg",
+                          "size": "20em"}
+  
+              }
+
+            ]
+
+          }
+
+      ]
+
+  }
+
+}
