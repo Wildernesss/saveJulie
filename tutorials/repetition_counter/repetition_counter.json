@@ -1,0 +1,38 @@
+{
+  "info": {
+    "name": "repetition_counter",
+    "author": "Collège St-Michel",
+    "currentStageNb": 0,
+    "currentSlideNb": 0    
+  },
+
+  "content": {
+
+    "stage" :
+
+      [
+
+        {
+
+          "number" : 0,
+          "title": "Sauvez Julie",
+          "visible": true,
+          "viewed": false,
+          "slide" : [
+
+            { "name": "Répétitions avec compteur",
+              "text": "Il est fréquent qu'une ou plusieurs opérations doivent être répétées un certain nombre de fois. Ce nombre de répétitions est connu à l'avance. A l'exécution de la réptition d'opérations, il sera alors nécessaire de compter chaque répétition effectuée jusqu'à ce que l'on atteigne le nombre de répétition total souhaité.<br><br>Concevez des algorithmes permettant à Marc de rejoindre Julie en ne faisant usage que des blocs <b>avancer</b>, <b>tourner</b>, <b>sauter</b> et <b>répéter n fois</b>. A vous de jouer !",
+              "image": {"src": "repeat_n.png",
+                        "size": "15em"}
+
+            }
+
+          ]
+
+        } 
+
+    ]
+
+  }
+
+}

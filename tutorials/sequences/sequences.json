@@ -1,0 +1,38 @@
+{
+  "info": {
+    "name": "sequences",
+    "author": "Collège St-Michel",
+    "currentStageNb": 0,
+    "currentSlideNb": 0
+  },
+
+  "content": {
+
+    "stage" :
+
+      [
+
+        {
+
+          "number" : 0,
+          "title": "Sauvez Julie",
+          "visible": true,
+          "viewed": false,
+          "slide" : [
+
+            { "name": "Séquences d'instructions",
+              "text": "Un algorithme est constitué d'une séquence d'opérations devant être exécutées dans un ordre donné. L'ordre des opérations se révèle le plus souvent (mais pas toujours) déterminant pour atteindre l'objectif visé : si ces opérations ne sont pas placées dans le bon ordre, l'objectif ne sera alors pas atteint.<br><br>Exercez-vous à composer des séquences d'instructions en ne faisant usage que des <i>blocs de la famille 'Action'</i> : <b>avancer</b>, <b>tourner</b> et <b>sauter</b>. A vous de jouer !",
+              "image": {"src": "blocks.png",
+                        "size": "15em"}
+
+            }
+
+          ]
+
+        } 
+
+    ]
+
+  }
+
+}

@@ -1,0 +1,46 @@
+{
+  "info": {
+    "name": "repetition_cond",
+    "author": "Collège St-Michel",
+    "currentStageNb": 0,
+    "currentSlideNb": 0    
+  },
+
+  "content": {
+
+    "stage" :
+
+      [
+
+        {
+
+          "number" : 0,
+          "title": "Sauvez Julie",
+          "visible": true,
+          "viewed": false,
+          "slide" : [
+
+            { "name": "Répétitions conditionelles",
+              "text": "Il est des situations où l'on ne peut savoir à l'avance combien de fois il sera nécessaire de répéter une ou plusieurs opérations. C'est par exemple le cas d'un robot explorateur venant d'attérir sur Mars : ses programmeurs ne peuvent savoir lors de sa conception combien de tours de roue il devra effectuer jusqu'au premier obstacle rencontré. Une répétion avec compteur ne convient alors pas.",
+              "image": {"src": "NASA_Mars_Rover_mini.jpg",
+                        "size": "20em"}
+
+            },
+
+            { "name": "Répétitions conditionelles",
+              "text": "En revanche il est possible de demander la répétition d'opérations sous condition. On peut par exemple demander à Marc de répéter l'opération 'Avancer' jusqu'à ce qu'il arrive devant une crevasse. Tant que Marc n'a pas de crevasse devant lui, il répète l'opération. Il est évidement également possible de demander de répéter plusieurs opérations.<br><br>Concevez des algorithmes qui amèneront Marc à Julie en faisant exclusivement usage des blocs <b>avancer</b>, <b>sauter</b>, <b>tourner</b> et <b>avancer jusqu'à</b>. A vous de joueur !",
+              "image": {"src": "repeat_cond.png",
+                        "size": "15em"}
+
+            }
+            
+
+          ]
+
+        } 
+
+    ]
+
+  }
+
+}
