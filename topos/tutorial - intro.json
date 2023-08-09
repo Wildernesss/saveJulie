@@ -1,0 +1,83 @@
+{
+  "info": {
+    "name": "Sauvez Julie - prise en main",
+    "author": "Collège St-Michel",
+    "currentItem": 0,
+    "tutorial": "introduction",
+    "activeTutorial": true
+  },  
+  "data": [
+    {
+      "title": "Introduction",
+      "succeed": false,
+      "playerOrientation": 0,
+      "world": [["x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x"],
+                ["o", "o", "o", "x", "o", "o", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "t", "o", "o", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "x", "c", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "p", "o", "o", "o", "o", "o"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"></xml>",
+      "javascript": ""},
+    {
+      "title": "Séquence II",
+      "succeed": false,
+      "playerOrientation": 0,
+      "world": [["x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "t", "x", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "o", "x", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "o", "x", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "p", "x", "o", "o", "o", "o"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"turn\" id=\"v)Z}ckqZ;Z*N6Fz/Y:R,\" x=\"-492\" y=\"-541\"><field name=\"orientation\">right</field><next><block type=\"move\" id=\"?b+2bM`zJZ*r=X9*gRZ2\"><next><block type=\"turn\" id=\"MAcb^=tN:Y`R.UJT-=-/\"><field name=\"orientation\">left</field><next><block type=\"move\" id=\"$/|uIzm]V==K6pN=35mS\"><next><block type=\"move\" id=\"pZ:Moo|/8OTAR$3AAlJ]\"><next><block type=\"move\" id=\"tm~Q$;O;xv,F(x%+Ha%m\"><next><block type=\"turn\" id=\"Yx|?VS1%/f]Z#`8dfs$b\"><field name=\"orientation\">left</field><next><block type=\"move\" id=\"z{w:qO~4dg}MP~^+(*WJ\"></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+      "javascript": ""},
+    {
+      "title": "Ouverture",
+      "succeed": false,
+      "playerOrientation": 0,
+      "world": [["x", "x", "x", "x", "x", "t", "x", "x", "x", "x", "x"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "p", "o", "o", "o", "o", "o"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"></xml>",
+      "javascript": ""},
+    {
+      "title": "Enregistrement",
+      "succeed": false,
+      "playerOrientation": 0,
+      "world": [["o", "o", "o", "o", "t"],
+                ["o", "o", "o", "x", "x"],
+                ["o", "o", "x", "x", "o"],
+                ["o", "x", "x", "o", "o"],
+                ["x", "x", "o", "o", "o"],
+                ["p", "o", "o", "o", "o"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"></xml>",
+      "javascript": ""},
+    {
+      "title": "Exercices",
+      "succeed": false,
+      "playerOrientation": 0,
+      "world": [["x", "x", "x", "x", "x", "t", "x", "x", "x", "x", "x"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "p", "o", "o", "o", "o", "o"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"></xml>",
+      "javascript": ""}
+    
+  ]
+}

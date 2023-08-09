@@ -1,0 +1,73 @@
+{
+  "info": {
+    "author": "Collège St-Michel",
+    "currentItem": 0,
+    "name": "Exercice 1 - les séquences"},
+  "data": [
+    {
+      "title": "Etape 1",
+      "succeed": false,
+      "playerOrientation": 0,
+      "world": [["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "t"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "x"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "x"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "x"],
+                ["x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x"],
+                ["p", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"move\" id=\"4eh0E~T0Dw^9R^pR`$[h\" x=\"88\" y=\"55\"><next><block type=\"turn\" id=\"kOp4%zziJ=pAfzmRmIN6\"><field name=\"orientation\">right</field><next><block type=\"repeat_until_something\" id=\"kN?)ttFqc4GWgAI~a#KK\"><field name=\"goalField\">wall</field><statement name=\"statements\"><block type=\"move\" id=\"M4#*BY=,9Jn3YJ%xD8u`\"></block></statement><next><block type=\"turn\" id=\"jtzI[/xH1Ozx;kg-tqnJ\"><field name=\"orientation\">left</field><next><block type=\"repeat_until_something\" id=\"fNie2E8|i]G|Z+m?8g|i\"><field name=\"goalField\">target</field><statement name=\"statements\"><block type=\"move\" id=\"Agrh|hry)=[_fh,Q2ALb\"></block></statement></block></next></block></next></block></next></block></next></block></xml>",
+      "javascript": "move();\nturnRight();\n\nwhile(! isWall(\"forward\")){\n\n  move();\n\n}\n\nturnLeft();\n\nwhile(! targetReached()){\n\n  move();\n\n}\n"},
+    {
+      "title": "Etape 2",
+      "succeed": false,
+      "playerOrientation": 0,
+      "world": [["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"],
+                ["o", "o", "x", "x", "x", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"></xml>",
+      "javascript": ""},
+    {
+      "title": "Etape 3",
+      "succeed": false,
+      "playerOrientation": 0,
+      "world": [["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "x", "o", "o", "o", "o", "o"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"></xml>",
+      "javascript": ""},
+    {
+      "title": "Etape 4",
+      "succeed": false,
+      "playerOrientation": 0,
+      "world": [["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "x"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"],
+                ["x", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"></xml>",
+      "javascript": ""},
+    {
+      "title": "Etape 5",
+      "succeed": false,
+      "playerOrientation": 0,
+      "world": [["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "c"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"></xml>",
+      "javascript": ""}
+  ]
+}

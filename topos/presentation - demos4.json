@@ -1,0 +1,23 @@
+{
+  "info": {
+    "name": "Leçon 1 - défaut",
+    "author": "Collège St-Michel",
+    "currentItem": 0
+  },
+  "data": [
+    {
+      "title": "item1",
+      "succeed": true,
+      "playerOrientation": 2,
+      "world": [["x", "c", "x", "x", "c", "x", "t"],
+                ["x", "o", "o", "o", "o", "o", "o"],
+                ["x", "o", "o", "o", "o", "o", "o"],
+                ["x", "o", "o", "o", "o", "o", "p"],
+                ["x", "o", "o", "o", "o", "o", "x"],
+                ["x", "o", "o", "o", "o", "o", "x"],
+                ["x", "x", "x", "x", "x", "x", "x"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"definition:move_to_something\" id=\"a8yeI`)gac*qgnPtAuuM\" x=\"46\" y=\"29\"><field name=\"goalField\">wall</field><statement name=\"statements\"><block type=\"repeat_until_something\" id=\"p~L.e0qTw5qQpFO/(Ko;\"><field name=\"goalField\">wall</field><statement name=\"statements\"><block type=\"move\" id=\"8w`k#*DsvA;-:E[/TYry\"></block></statement></block></statement></block><block type=\"definition:move_to_something\" id=\"Hj({:Lk.4iWdg(tkisd7\" x=\"290\" y=\"29\"><field name=\"goalField\">target</field><statement name=\"statements\"><block type=\"repeat_until_something\" id=\"@fZXcAJ+!+}axh;eonV9\"><field name=\"goalField\">target</field><statement name=\"statements\"><block type=\"if_else_something_in_direction\" id=\"gLlH00/QXFS+9S4Ec[h`\"><field name=\"goalField\">crack</field><field name=\"orientation\">forward</field><statement name=\"statements_if\"><block type=\"jump\" id=\"Kjsi,6|/rBL{?u=$qF1;\"></block></statement><statement name=\"statements_else\"><block type=\"move\" id=\"sa{vvLz6:b~z|/GAl_#Q\"></block></statement></block></statement></block></statement></block><block type=\"repeat_n_times\" id=\"K*~;*=AdsH4C(K]x]%0x\" x=\"71\" y=\"166\"><field name=\"n\">3</field><statement name=\"statements\"><block type=\"move_to_something\" id=\"JjR#`ZBq.wn;3eiBg|tL\"><field name=\"goalField\">wall</field><next><block type=\"turn\" id=\"]PHL489#GukYSH9*+2$U\"><field name=\"orientation\">right</field></block></next></block></statement><next><block type=\"move_to_something\" id=\"*n8`M?:|VEKTJZWk^:V?\"><field name=\"goalField\">target</field></block></next></block></xml>",
+      "javascript": "function moveToWall(){\n\n\n  while(! isWall(\"forward\")){\n\n    move();\n\n  }\n\n\n}\n\n\n\nfunction moveToTarget(){\n\n\n  while(! targetReached()){\n\n\n    if(isCrack(\"forward\")){\n\n      jump();\n\n    } else {\n\n      move();\n\n    }\n\n\n  }\n\n\n}\n\n\n\nfor(let i = 0; i < 3; i++){\n\n  moveToWall();\n  turnRight();\n\n}\n\nmoveToTarget();\n"}
+  ]
+}

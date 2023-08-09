@@ -1,0 +1,20 @@
+{
+  "info": {
+    "name": "Script - démos",
+    "author": "Collège St-Michel",
+    "currentItem": 0
+  },
+  "data": [
+    {
+      "title": "Contrainte",
+      "succeed": false,
+      "playerOrientation": 0,
+      "world": [["o", "o", "o", "x", "x"],
+                ["o", "o", "o", "c", "o"],
+                ["x", "c", "x", "x", "o"],
+                ["x", "o", "o", "o", "o"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"></xml>",
+      "javascript": ""}
+  ]
+}

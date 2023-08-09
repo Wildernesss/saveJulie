@@ -1,0 +1,26 @@
+{
+  "info": {
+    "name": "Leçon 1 - défaut",
+    "author": "Collège St-Michel",
+    "currentItem": 0
+  },
+  "data": [
+    {
+      "title": "item1",
+      "succeed": false,
+      "playerOrientation": 0,
+      "world": [["o", "o", "o", "o", "o"],
+	            ["o", "o", "o", "x", "t"],
+                ["o", "o", "o", "c", "o"],
+                ["o", "o", "x", "x", "o"],
+                ["o", "o", "x", "o", "o"],
+                ["o", "x", "x", "o", "o"],
+                ["o", "c", "o", "o", "o"],
+                ["x", "x", "o", "o", "o"],
+                ["x", "o", "o", "o", "o"],
+                ["p", "o", "o", "o", "o"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"repeat_until_something\" id=\"=?Cw}a?cTkT]hsG[:BtL\" x=\"142\" y=\"-37\"><field name=\"goalField\">target</field><statement name=\"statements\"><block type=\"repeat_until_something\" id=\"7,/PcHo%F#;2m(!Gl^/J\"><field name=\"goalField\">glacier</field><statement name=\"statements\"><block type=\"if_else_something_in_direction\" id=\"~PTRg#A^v7k~t`or1MGQ\"><field name=\"goalField\">crack</field><field name=\"orientation\">forward</field><statement name=\"statements_if\"><block type=\"jump\" id=\"j`:Zbo;)]i0mC|N]^rw3\"></block></statement><statement name=\"statements_else\"><block type=\"move\" id=\"PhdP{`Ny;ytXVeF=]%5/\"></block></statement></block></statement><next><block type=\"turn\" id=\"MCWVSUDw-pE`!R^|`D/f\"><field name=\"orientation\">right</field><next><block type=\"move\" id=\"iu9Z4q}L)i@k2HME.Xa!\"><next><block type=\"turn\" id=\"wF|dovV+=t+-N[~-JE8Q\"><field name=\"orientation\">left</field></block></next></block></next></block></next></block></statement></block></xml>",
+      "javascript": "while(! targetReached()){\n\n\n  while(! isGlacier(\"forward\")){\n\n\n    if(isCrack(\"forward\")){\n\n      jump();\n\n    } else {\n\n      move();\n\n    }\n\n\n  }\n\n  turnRight();\n  move();\n  turnLeft();\n\n}\n"}
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "info": {
+    "name": "Leçon 1 - défaut",
+    "author": "Collège St-Michel",
+    "currentItem": 0
+  },
+  "data": [
+    {
+      "title": "item1",
+      "succeed": false,
+      "playerOrientation": 0,
+      "world": [["t", "x", "c", "x", "x", "c", "x"],
+                ["o", "o", "o", "o", "o", "o", "x"],
+                ["o", "o", "o", "o", "x", "x", "x"],
+                ["o", "o", "o", "o", "x", "o", "o"],
+                ["o", "o", "x", "x", "x", "o", "o"],
+                ["o", "o", "x", "o", "o", "o", "o"],
+                ["x", "x", "x", "o", "o", "o", "o"],
+                ["x", "o", "o", "o", "o", "o", "o"],
+                ["x", "x", "x", "x", "x", "x", "p"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"></xml>",
+      "javascript": ""}
+  ]
+}

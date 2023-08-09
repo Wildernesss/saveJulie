@@ -1,0 +1,19 @@
+{
+  "info": {
+    "name": "Leçon 1 - défaut",
+    "author": "Collège St-Michel",
+    "currentItem": 0
+  },
+  "data": [
+    {
+      "title": "item1",
+      "succeed": false,
+      "playerOrientation": 0,
+      "world": [["o", "x", "o"],
+                ["o", "p", "o"],
+                ["o", "x", "o"]
+               ],
+      "blocks": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"turn\" id=\"wo6Bjh?]`({rm}a`g+`Q\" x=\"-18\" y=\"-79\"><field name=\"orientation\">left</field><next><block type=\"turn\" id=\"MX2a$f1UmMMSe#.AXv!(\"><field name=\"orientation\">left</field><next><block type=\"move\" id=\"ix+W0l|NFJ6ro*#vY#v)\"><next><block type=\"turn\" id=\"GxOzX1Vl^4.Qx1ppg%R;\"><field name=\"orientation\">left</field><next><block type=\"turn\" id=\"8Fq=/P%RaDqj9ABIJWy%\"><field name=\"orientation\">left</field><next><block type=\"jump\" id=\"8+TP7e(aF-p*qaf|e%+P\"><next><block type=\"move\" id=\"R*oRi,~1{F:bm}mkTpo/\"></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+      "javascript": "turnLeft();\nturnLeft();\nmove();\nturnLeft();\nturnLeft();\njump();\nmove();\n"}
+  ]
+}

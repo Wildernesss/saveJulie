@@ -1,0 +1,126 @@
+{
+  "info": {
+    "name": "Exercice 4 - tests conditionnels",
+    "author": "Collège St-Michel",
+    "currentItem": 0
+  },
+  "data": [
+    {
+      "title": "Test(s) I",
+      "succeed": true,
+      "playerOrientation": 1,
+      "world": [["o", "o", "o", "o"],
+                ["o", "o", "o", "o"],
+                ["p", "o", "x", "t"],
+                ["o", "o", "o", "o"],
+                ["o", "o", "o", "o"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"repeat_until_something\" id=\"Frh!T(r|eJVnH$?4NAu@\" x=\"25\" y=\"30\"><field name=\"goalField\">target</field><statement name=\"statements\"><block type=\"if_else_something_in_direction\" id=\"u+;+([e}(v)^Db#hHP03\"><field name=\"goalField\">glacier</field><field name=\"orientation\">forward</field><statement name=\"statements_if\"><block type=\"jump\" id=\"Gn#83[.Q|CV[qCURH!.v\"></block></statement><statement name=\"statements_else\"><block type=\"move\" id=\"MHEwiLT*fb|k-*EefL^6\"></block></statement></block></statement></block></xml>",
+      "javascript": "while(! targetReached()){\n\n\n  if(isGlacier(\"forward\")){\n\n    jump();\n\n  } else {\n\n    move();\n\n  }\n\n\n}\n"},
+    {
+      "title": "Test(s) II",
+      "succeed": true,
+      "playerOrientation": 1,
+      "world": [["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"],
+                ["p", "o", "x", "x", "o", "x", "x", "o", "x", "o", "t"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"repeat_until_something\" id=\"}[6*Q=:}`krUR@C4],u;\" x=\"30\" y=\"36\"><field name=\"goalField\">target</field><statement name=\"statements\"><block type=\"if_something_in_direction\" id=\"1/ZnYRX_*7-3our1?^N/\"><field name=\"goalField\">glacier</field><field name=\"orientation\">forward</field><statement name=\"statements_if\"><block type=\"jump\" id=\"$dl1)exA9lvV{{]N(!NJ\"></block></statement><next><block type=\"if_something_in_direction\" id=\"|SLp=4e,EmxYh}D^wd4G\"><field name=\"goalField\">track</field><field name=\"orientation\">forward</field><statement name=\"statements_if\"><block type=\"move\" id=\"*4z+(3.TgNOvAdv^w.u/\"></block></statement></block></next></block></statement></block></xml>",
+      "javascript": "while(! targetReached()){\n\n\n  if(isGlacier(\"forward\")){\n\n    jump();\n\n  }\n\n\n  if(isTrack(\"forward\")){\n\n    move();\n\n  }\n\n\n}\n"},
+    {
+      "title": "Test(s) III",
+      "succeed": true,
+      "playerOrientation": 1,
+      "world": [["o", "x", "x", "x", "o", "o", "x", "o", "o", "o", "x"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"],
+                ["p", "x", "x", "x", "x", "x", "x", "o", "o", "x", "o"],
+                ["o", "o", "o", "o", "o", "o", "x", "o", "o", "o", "o"],
+                ["o", "o", "x", "x", "o", "o", "x", "o", "o", "x", "x"],
+                ["x", "o", "o", "o", "o", "o", "t", "o", "o", "x", "x"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"repeat_until_something\" id=\"u?QCB8:g?^Po|,56ydv9\" x=\"36\" y=\"28\"><field name=\"goalField\">target</field><statement name=\"statements\"><block type=\"if_else_something_in_direction\" id=\"}6[o5IX9_V5.AL5=g4%d\"><field name=\"goalField\">track</field><field name=\"orientation\">forward</field><statement name=\"statements_if\"><block type=\"move\" id=\"u.XoQ:z!4eC66Q=00jU|\"></block></statement><statement name=\"statements_else\"><block type=\"turn\" id=\"]~)5#Ds,9uhJS%oRMAo!\"><field name=\"orientation\">right</field></block></statement></block></statement></block></xml>",
+      "javascript": "while(! targetReached()){\n\n\n  if(isTrack(\"forward\")){\n\n    move();\n\n  } else {\n\n    turnRight();\n\n  }\n\n\n}\n"},
+    {
+      "title": "Test(s) IV",
+      "succeed": true,
+      "playerOrientation": 1,
+      "world": [["o", "x", "x", "x", "o", "o", "x", "o", "o", "o", "x"],
+                ["o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o"],
+                ["p", "o", "x", "o", "x", "o", "x", "o", "o", "x", "o"],
+                ["o", "o", "o", "o", "o", "o", "x", "o", "o", "o", "o"],
+                ["o", "o", "x", "x", "o", "o", "x", "o", "o", "x", "x"],
+                ["x", "o", "o", "o", "o", "o", "t", "o", "o", "x", "x"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"repeat_until_something\" id=\"p*y(zvkL/N[SiYVIsd0M\" x=\"39\" y=\"32\"><field name=\"goalField\">target</field><statement name=\"statements\"><block type=\"if_else_crack_width\" id=\"^^rXu!e|4J~=WE$KpW+_\"><field name=\"object\">glacier</field><field name=\"orientation\">forward</field><field name=\"inequality\">&gt;</field><field name=\"width\">1</field><statement name=\"statements_if\"><block type=\"turn\" id=\"6w^J#5i]*381hxBZ:M~e\"><field name=\"orientation\">right</field></block></statement><statement name=\"statements_else\"><block type=\"if_else_something_in_direction\" id=\"a7geCI8OSL#m9sb^W7cC\"><field name=\"goalField\">glacier</field><field name=\"orientation\">forward</field><statement name=\"statements_if\"><block type=\"jump\" id=\"eb{Qh[I9#93}^v)n!b5E\"></block></statement><statement name=\"statements_else\"><block type=\"move\" id=\"zB7jA:s$8nYpp9zSf%*S\"></block></statement></block></statement></block></statement></block></xml>",
+      "javascript": "while(! targetReached()){\n\n\n  if(glacierWidth(\"forward\") > 1){\n\n    turnRight();\n\n  } else {\n\n\n    if(isGlacier(\"forward\")){\n\n      jump();\n\n    } else {\n\n      move();\n\n    }\n\n\n  }\n\n\n}\n"},
+    {
+      "title": "Test(s) V",
+      "succeed": true,
+      "playerOrientation": 1,
+      "world": [["o", "o", "o", "o", "o", "o", "o", "t"],
+                ["o", "o", "o", "o", "o", "o", "o", "x"],
+                ["o", "o", "o", "o", "o", "o", "o", "x"],
+                ["p", "x", "x", "x", "x", "x", "x", "x"],
+                ["o", "o", "o", "o", "o", "o", "o", "x"],
+                ["o", "o", "o", "o", "o", "o", "o", "x"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"repeat_until_something\" id=\"4n{S5BKOpj%@-~!M2x^n\" x=\"27\" y=\"33\"><field name=\"goalField\">target</field><statement name=\"statements\"><block type=\"if_else_something_in_direction\" id=\"~aN9wssRV0GBfYof(qFe\"><field name=\"goalField\">track</field><field name=\"orientation\">forward</field><statement name=\"statements_if\"><block type=\"move\" id=\"!|8-FJBQSjqwmj5iBQKJ\"></block></statement><statement name=\"statements_else\"><block type=\"turn\" id=\"+V*sCcC4qn!eyh(W*839\"><field name=\"orientation\">left</field></block></statement></block></statement></block></xml>",
+      "javascript": "while(! targetReached()){\n\n\n  if(isTrack(\"forward\")){\n\n    move();\n\n  } else {\n\n    turnLeft();\n\n  }\n\n\n}\n"},
+    {
+      "title": "Test(s) VI",
+      "succeed": false,
+      "playerOrientation": 3,
+      "world": [["o", "o", "x", "c", "x", "o", "o", "x", "c", "o", "o"],
+                ["x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "p"],
+                ["o", "o", "x", "o", "o", "o", "o", "o", "o", "o", "o"],
+                ["o", "o", "x", "o", "o", "o", "o", "o", "o", "o", "o"],
+                ["o", "o", "x", "o", "o", "x", "c", "x", "o", "o", "o"],
+                ["x", "x", "x", "x", "x", "x", "x", "x", "x", "t", "o"],
+                ["o", "c", "x", "o", "o", "x", "c", "x", "o", "o", "o"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"></xml>",
+      "javascript": ""},
+    {
+      "title": "Test(s) VII*",
+      "succeed": true,
+      "playerOrientation": 2,
+      "world": [["p", "o", "x", "x", "x", "x", "x", "x"],
+                ["x", "o", "x", "o", "o", "o", "o", "x"],
+                ["x", "o", "x", "o", "t", "x", "o", "x"],
+                ["x", "o", "x", "o", "o", "x", "o", "x"],
+                ["x", "o", "x", "x", "x", "x", "o", "x"],
+                ["x", "o", "o", "o", "o", "o", "o", "x"],
+                ["x", "x", "x", "x", "x", "x", "x", "x"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"repeat_until_something\" id=\"X,X$7(^ZrT_P8DzAho(`\" x=\"44\" y=\"25\"><field name=\"goalField\">target</field><statement name=\"statements\"><block type=\"if_else_something_in_direction\" id=\"Tj/9dO{F3|p+@J%-E,E5\"><field name=\"goalField\">track</field><field name=\"orientation\">forward</field><statement name=\"statements_if\"><block type=\"move\" id=\")!sOA)[i`O55y#ldz+)Y\"></block></statement><statement name=\"statements_else\"><block type=\"turn\" id=\":-r^5L-H9t=~aSVkd9rD\"><field name=\"orientation\">left</field></block></statement></block></statement></block></xml>",
+      "javascript": "while(! targetReached()){\n\n\n  if(isTrack(\"forward\")){\n\n    move();\n\n  } else {\n\n    turnLeft();\n\n  }\n\n\n}\n"},
+    {
+      "title": "Test(s) VIII",
+      "succeed": true,
+      "playerOrientation": 3,
+      "world": [["x", "x", "o", "o", "x", "x", "x", "x", "x", "x", "p"],
+                ["o", "o", "o", "o", "x", "o", "o", "o", "o", "o", "o"],
+                ["o", "o", "o", "o", "x", "o", "o", "c", "o", "o", "o"],
+                ["x", "x", "x", "x", "x", "o", "o", "x", "x", "x", "t"],
+                ["x", "o", "o", "o", "c", "o", "o", "x", "o", "o", "o"],
+                ["x", "x", "x", "x", "x", "x", "x", "x", "o", "o", "x"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"repeat_until_something\" id=\"~Kv`tXkhFC}2jOX_l~W.\" x=\"43\" y=\"22\"><field name=\"goalField\">target</field><statement name=\"statements\"><block type=\"if_something_in_direction\" id=\"a2DH/XUQuP@HFfM9Zll]\"><field name=\"goalField\">track</field><field name=\"orientation\">forward</field><statement name=\"statements_if\"><block type=\"move\" id=\")JJLDuK,u:=2KVA?g5ss\"></block></statement><next><block type=\"if_something_in_direction\" id=\"iV#IMw6]uo6;sr`bIBzk\"><field name=\"goalField\">glacier</field><field name=\"orientation\">forward</field><statement name=\"statements_if\"><block type=\"turn\" id=\"Ro.|{AoFL;_*=p+RQ|X]\"><field name=\"orientation\">left</field></block></statement><next><block type=\"if_something_in_direction\" id=\"*}%H,a}f5}r_,6T#zf{e\"><field name=\"goalField\">crack</field><field name=\"orientation\">forward</field><statement name=\"statements_if\"><block type=\"turn\" id=\"+!JyPx=w{OI7|}b:,}f(\"><field name=\"orientation\">right</field></block></statement><next><block type=\"if_something_in_direction\" id=\".]|JAP{]*5$xzit](a#2\"><field name=\"goalField\">wall</field><field name=\"orientation\">forward</field><statement name=\"statements_if\"><block type=\"turn\" id=\"#w-eG6fvp;0|)pN1MVg@\"><field name=\"orientation\">left</field></block></statement></block></next></block></next></block></next></block></statement></block></xml>",
+      "javascript": "while(! targetReached()){\n\n\n  if(isTrack(\"forward\")){\n\n    move();\n\n  }\n\n\n  if(isGlacier(\"forward\")){\n\n    turnLeft();\n\n  }\n\n\n  if(isCrack(\"forward\")){\n\n    turnRight();\n\n  }\n\n\n  if(isWall(\"forward\")){\n\n    turnLeft();\n\n  }\n\n\n}\n"},
+    {
+      "title": "Test(s) IX*",
+      "succeed": true,
+      "playerOrientation": 1,
+      "world": [["x", "x", "x", "x", "x", "x", "c", "o", "o", "o", "o"],
+                ["x", "o", "o", "o", "o", "x", "o", "t", "x", "x", "o"],
+                ["x", "o", "o", "o", "o", "x", "o", "o", "o", "x", "o"],
+                ["x", "x", "x", "x", "o", "x", "o", "o", "o", "x", "o"],
+                ["o", "o", "o", "x", "o", "x", "x", "x", "x", "x", "o"],
+                ["p", "x", "x", "x", "o", "o", "o", "o", "o", "o", "o"]
+               ],
+      "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"repeat_until_something\" id=\"$y]?vW%`+j|c,k)P#-M/\" x=\"35\" y=\"25\"><field name=\"goalField\">target</field><statement name=\"statements\"><block type=\"if_something_in_direction\" id=\"iHJ)r)y0jhg-];=*]qfl\"><field name=\"goalField\">track</field><field name=\"orientation\">forward</field><statement name=\"statements_if\"><block type=\"move\" id=\"/)f`H[L)A@oClg$Y.8Oe\"></block></statement><next><block type=\"if_something_in_direction\" id=\"cGe;I-a.)lP.D0si^t`a\"><field name=\"goalField\">glacier</field><field name=\"orientation\">forward</field><statement name=\"statements_if\"><block type=\"turn\" id=\"zz#qsQ2vmBaHmQ@@_/!a\"><field name=\"orientation\">left</field></block></statement><next><block type=\"if_something_in_direction\" id=\"el0:``QgqgxhJ}mK_t5J\"><field name=\"goalField\">wall</field><field name=\"orientation\">forward</field><statement name=\"statements_if\"><block type=\"turn\" id=\"~T_74|TWd[|%9}WZg2?/\"><field name=\"orientation\">right</field></block></statement><next><block type=\"if_something_in_direction\" id=\"(KFHDh)[QNY:;U8NA[F6\"><field name=\"goalField\">crack</field><field name=\"orientation\">forward</field><statement name=\"statements_if\"><block type=\"turn\" id=\";[NmB*9r!YYWq`3wJy.l\"><field name=\"orientation\">right</field></block></statement></block></next></block></next></block></next></block></statement></block></xml>",
+      "javascript": "while(! targetReached()){\n\n\n  if(isTrack(\"forward\")){\n\n    move();\n\n  }\n\n\n  if(isGlacier(\"forward\")){\n\n    turnLeft();\n\n  }\n\n\n  if(isWall(\"forward\")){\n\n    turnRight();\n\n  }\n\n\n  if(isCrack(\"forward\")){\n\n    turnRight();\n\n  }\n\n\n}\n"}
+  ]
+}
